@@ -11,7 +11,7 @@ const users = require("./routes/api/users");
 
 const uri = process.env.MONGODB_URI;
 
-const Message = require('./models/Messages');
+//const Message = require('./models/Messages');
 
 // Bodyparser middleware
 app.use(
@@ -21,7 +21,7 @@ app.use(
 );
 app.use(bodyParser.json());
 // DB Config
-const db = require("./config/keys").mongoURI;
+const db = process.env.mongoURI || require("./config/keys").mongoURI;
 // Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true })
