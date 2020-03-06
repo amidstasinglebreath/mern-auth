@@ -29,5 +29,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "cacheDirectories": ["node_modules", "client/node_modules"]
 }
