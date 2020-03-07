@@ -1,0 +1,12 @@
+.slide-panel_header{
+    background: #3f51b5;
+}
+
+.slide-pane .slide-panel_title .slide-panel_subtitle {
+    color: whitesmoke;
+}
+
+.slide-panel_content {
+    background-color: #828dc7;
+    color: whitesmoke;
+}

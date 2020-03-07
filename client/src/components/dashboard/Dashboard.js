@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import React, { useState } from 'react';
+
+import { Link } from 'react-router-dom';
+  
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -16,10 +20,16 @@ return (
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+                You are logged{" "}
+                <span style={{ fontFamily: "monospace" }}>Giphychat</span> app 👏
               </p>
             </h4>
+             {/* link to chat application */}
+             <Link onClick={event => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name} & room=${room}`}>
+                <button className="button mt-20" type="submit">Join</button>
+            </Link>            
+            </div>
+            <div className="loginImage">
             <button
               style={{
                 width: "150px",
@@ -33,6 +43,10 @@ return (
               Logout
             </button>
           </div>
+          <div className="loginImage">
+              {/* <img src = "https://i.picsum.photos/id/101/200/300.jpg"></img> */}
+              <img className = "mac" src = {mac13}></img>
+          </div> 
         </div>
       </div>
     );

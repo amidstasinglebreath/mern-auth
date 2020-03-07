@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+nav {
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
